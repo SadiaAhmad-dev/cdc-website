@@ -39,10 +39,25 @@ const CDC_YOUTUBE =
 const CDC_HANDBOOK =
   "https://www.uetpeshawar.edu.pk/cdc/handbook.php";
 
-  const CDC_CAREER_PORTAL =
-  "https://www.uetpeshawar.edu.pk/career-development-center/";
+const CDC_TEAM =
+  "https://www.uetpeshawar.edu.pk/cdc/cdcteam.php";
 
-  const CDC_EMAIL =
+const CDC_OFFICES =
+  "https://www.uetpeshawar.edu.pk/cdc/offices.php";
+
+const CDC_PORTALS =
+  "https://www.uetpeshawar.edu.pk/cdc/portals.php";
+
+const CDC_EVENTS =
+  "https://www.uetpeshawar.edu.pk/cdc/events.php";
+
+const CDC_CONTACT =
+  "https://www.uetpeshawar.edu.pk/cdc/contact.php";
+
+const CDC_CAREER_PORTAL =
+  "https://uetpeshawar.rozee.pk/register.php?accType=alumni&ac=new";
+
+const CDC_EMAIL =
   "mailto:cdc@uetpeshawar.edu.pk";
 
 function App() {
@@ -175,6 +190,10 @@ function App() {
           <span>Director, Career Development Center (CDC)</span>
           <span>University of Engineering & Technology, Peshawar</span>
         </div>
+
+        <a href="#contact" className="btn director-cta">
+          Contact CDC for Collaboration <ArrowRight size={15} strokeWidth={1.8} />
+        </a>
 
       </div>
 
@@ -638,7 +657,7 @@ function App() {
                   </p>
 
                   <a
-                    href={OFFICIAL_CDC}
+                    href={CDC_EVENTS}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -665,7 +684,7 @@ function App() {
                   </p>
 
                   <a
-                    href={OFFICIAL_CDC}
+                    href={CDC_EVENTS}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -708,7 +727,7 @@ function App() {
             <div className="events-button">
 
               <a
-                href={OFFICIAL_CDC}
+                href={CDC_EVENTS}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn green"
@@ -772,7 +791,7 @@ function App() {
 
 
               <a
-                href={OFFICIAL_CDC}
+                href={CDC_HANDBOOK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resource-card"
@@ -797,7 +816,7 @@ function App() {
 
 
               <a
-                href={OFFICIAL_CDC}
+                href={CDC_PORTALS}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resource-card"
@@ -959,7 +978,7 @@ function App() {
 
 
         {/* ================= CONTACT ================= */}
-        <section className="contact-section">
+        <section id="contact" className="contact-section">
 
           <div className="container contact-grid">
 
@@ -979,12 +998,23 @@ function App() {
                 development.
               </p>
 
-              <a
-                href={CDC_EMAIL}
-                className="btn white"
-              >
-                Email CDC
-              </a>
+              <div className="contact-actions">
+                <a
+                  href={CDC_EMAIL}
+                  className="btn white"
+                >
+                  Email CDC
+                </a>
+
+                <a
+                  href={CDC_CONTACT}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn contact-outline"
+                >
+                  CDC Contact Page <ArrowUpRight size={14} strokeWidth={1.8} />
+                </a>
+              </div>
 
             </div>
 
@@ -1063,6 +1093,7 @@ function App() {
             <a href="#opportunities">Opportunities</a>
             <a href="#events">Events</a>
             <a href="#resources">Resources</a>
+            <a href="#contact">Contact CDC</a>
 
           </div>
 
@@ -1101,6 +1132,22 @@ function App() {
               rel="noopener noreferrer"
             >
               YouTube ↗
+            </a>
+
+            <a
+              href={CDC_TEAM}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CDC Team ↗
+            </a>
+
+            <a
+              href={CDC_OFFICES}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Career Resource Offices ↗
             </a>
 
           </div>

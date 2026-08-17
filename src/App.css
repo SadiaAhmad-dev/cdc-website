@@ -2820,3 +2820,48 @@ svg {
     height: 290px;
   }
 }
+
+/* ================= DIRECTOR CTA + CONTACT ACTIONS ================= */
+.director-cta {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--uet-orange);
+  color: var(--white);
+}
+
+.director-cta:hover {
+  background: var(--uet-orange-dark);
+  color: var(--white);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.contact-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: var(--white);
+  background: transparent;
+}
+
+.contact-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .director-cta,
+  .contact-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
