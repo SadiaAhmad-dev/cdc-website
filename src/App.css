@@ -2292,3 +2292,531 @@ footer {
     transform: translateX(-100%);
   }
 }
+
+/* =========================================================
+   FINAL MOBILE RESPONSIVE FIX
+   These rules intentionally come last so they override the
+   older desktop/mobile rules above.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+}
+
+/* Desktop header */
+.mobile-menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Make the director section flexible */
+.director-message-card {
+  width: 100%;
+}
+
+.director-photo {
+  max-width: 100%;
+}
+
+.success-story-container {
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .header-inner {
+    padding: 0 20px;
+    gap: 18px;
+  }
+
+  .uet-logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .main-nav {
+    gap: 2px;
+  }
+
+  .main-nav a {
+    padding: 9px 8px;
+    font-size: 12px;
+  }
+
+  .main-nav .official-link {
+    margin-left: 4px;
+    padding: 9px 10px;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+    place-items: center;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.mobile-open {
+    display: flex;
+  }
+
+  .director-message-card {
+    grid-template-columns: 230px 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .director-photo {
+    width: 230px;
+    height: 330px;
+  }
+
+  .director-content h2 {
+    font-size: 27px;
+  }
+
+  .director-content p {
+    font-size: 14px;
+  }
+
+  .opportunity-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .opportunity-card {
+    height: auto;
+    min-height: 350px;
+  }
+
+  .contact-grid {
+    gap: 45px;
+  }
+}
+
+/* Phone */
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  /* ---------- Header / mobile menu ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
+  .header-inner {
+    min-height: 68px;
+    padding: 8px 14px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1;
+    gap: 9px;
+  }
+
+  .uet-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-text {
+    min-width: 0;
+  }
+
+  .brand-text strong {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .brand-text span {
+    font-size: 9px;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    padding: 10px 0 4px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .main-nav.mobile-open {
+    display: flex;
+  }
+
+  .main-nav a,
+  .main-nav .official-link {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 13px;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  /* ---------- Success ticker ---------- */
+  .success-news-bar {
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .moving-news {
+    padding-left: 100%;
+    white-space: nowrap;
+    animation-duration: 20s;
+  }
+
+  /* ---------- Director ---------- */
+  .director-message-section {
+    padding: 35px 0;
+  }
+
+  .director-message-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .director-photo {
+    width: 100%;
+    max-width: 260px;
+    height: 330px;
+    margin: 0 auto;
+  }
+
+  .director-content h2 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .director-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .director-greeting {
+    margin: 12px 0 18px;
+    padding-left: 12px;
+  }
+
+  .director-greeting p {
+    font-size: 15px;
+  }
+
+  .director-signature strong {
+    font-size: 15px;
+  }
+
+  .director-signature span {
+    font-size: 11px;
+  }
+
+  /* ---------- Success cards ---------- */
+  .success-stories {
+    padding: 42px 14px;
+  }
+
+  .success-stories h2 {
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  .success-story-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .success-card {
+    width: 100%;
+    padding: 23px 20px;
+  }
+
+  .success-card h3 {
+    font-size: 21px;
+  }
+
+  .success-card p {
+    font-size: 14px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero-content {
+    padding: 55px 0;
+  }
+
+  .hero h2 {
+    font-size: clamp(36px, 11vw, 50px);
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-text > p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* ---------- Quick links ---------- */
+  .quick-section {
+    margin-top: -12px;
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .quick-card {
+    min-width: 0;
+    padding: 15px 12px;
+    gap: 9px;
+  }
+
+  .quick-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .quick-card h3 {
+    font-size: 13px;
+  }
+
+  .quick-card p {
+    font-size: 10px;
+  }
+
+  /* ---------- Sections ---------- */
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2,
+  .about-grid h2,
+  .connect-heading h2 {
+    font-size: clamp(27px, 8vw, 34px);
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  /* ---------- Opportunities ---------- */
+  .opportunities-section {
+    padding: 0;
+  }
+
+  .opportunities-container {
+    padding: 0;
+  }
+
+  .opportunity-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .opportunity-card,
+  .opportunity-card.featured {
+    height: auto;
+    min-height: 0;
+    padding: 25px 21px;
+    border-radius: 13px;
+  }
+
+  .opportunity-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 25px;
+  }
+
+  .opportunity-card h3 {
+    font-size: 22px;
+  }
+
+  .opportunity-card p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* ---------- Events ---------- */
+  .events-grid,
+  .resources-grid,
+  .connect-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .event-card {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .event-number {
+    font-size: 22px;
+    flex: 0 0 auto;
+  }
+
+  .resource-card {
+    padding: 23px;
+  }
+
+  .connect-grid .connect-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .connect-card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .connect-card h3 {
+    font-size: 16px;
+  }
+
+  .connect-card p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .connect-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-section h2 {
+    font-size: clamp(30px, 9vw, 38px);
+  }
+
+  .contact-details {
+    gap: 18px;
+  }
+
+  .contact-details p,
+  .contact-details a {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 0;
+  }
+
+  .footer-bottom .container {
+    flex-direction: column;
+    gap: 7px;
+    padding: 16px 0;
+  }
+
+  .footer-bottom p {
+    font-size: 9px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 22px);
+  }
+
+  .brand-text strong {
+    font-size: 11px;
+  }
+
+  .uet-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 45px 0;
+  }
+
+  .director-message-card {
+    padding: 16px;
+  }
+
+  .director-photo {
+    height: 290px;
+  }
+}

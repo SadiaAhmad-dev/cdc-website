@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import UETLogo from "./uet-logo.png";
 import DirectorPhoto from "./director.jpg";
 import {
@@ -19,6 +20,8 @@ import {
   Link2,
   PlayCircle as YouTube,
   Globe2,
+  Menu,
+  X,
 } from "lucide-react";
 
 const OFFICIAL_CDC =
@@ -43,6 +46,8 @@ const CDC_HANDBOOK =
   "mailto:cdc@uetpeshawar.edu.pk";
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="app">
       <div className="success-news-bar">
@@ -56,30 +61,45 @@ function App() {
      <header className="site-header">
   <div className="header-inner">
 
-    <a href="#home" className="brand">
-    <img
-  src={UETLogo}
-  alt="UET Peshawar"
-  className="uet-logo"
-/>
+    <a
+      href="#home"
+      className="brand"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      <img
+        src={UETLogo}
+        alt="UET Peshawar"
+        className="uet-logo"
+      />
       <div className="brand-text">
         <strong>Career Development Center</strong>
         <span>UET Peshawar</span>
       </div>
     </a>
 
-    <nav className="main-nav">
-      <a href="#home" className="active">Home</a>
-      <a href="#services">Services</a>
-      <a href="#opportunities">Opportunities</a>
-      <a href="#events">Events</a>
-      <a href="#resources">Resources</a>
+    <button
+      type="button"
+      className="mobile-menu-button"
+      aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+      aria-expanded={mobileMenuOpen}
+      onClick={() => setMobileMenuOpen((open) => !open)}
+    >
+      {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+    </button>
+
+    <nav className={`main-nav ${mobileMenuOpen ? "mobile-open" : ""}`}>
+      <a href="#home" className="active" onClick={() => setMobileMenuOpen(false)}>Home</a>
+      <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
+      <a href="#opportunities" onClick={() => setMobileMenuOpen(false)}>Opportunities</a>
+      <a href="#events" onClick={() => setMobileMenuOpen(false)}>Events</a>
+      <a href="#resources" onClick={() => setMobileMenuOpen(false)}>Resources</a>
 
       <a
         href={OFFICIAL_CDC}
         target="_blank"
         rel="noopener noreferrer"
         className="official-link"
+        onClick={() => setMobileMenuOpen(false)}
       >
         Official CDC <ArrowUpRight size={15} />
       </a>
